@@ -1,0 +1,464 @@
+:root {
+    --bg-color: #111111;
+    --card-color: #1D1D1D;
+    --card-color-op: rgba(161, 161, 161, 0.1);
+    --white: #ffffff;
+    --bullet-color: #A1A1A1;
+    --swiper-btn-color: linear-gradient(87.37deg, #445E54 0%, #2E6857 100%);
+    --links-hover-color: #62CDFF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "TTNorms";
+    src: url("../fonts/TTNorms-Regular.woff") format("woff");
+    /* url(/path/to/fonts/examplefont.eot) format("eot") */
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "TTNorms Bold";
+    src: url("../fonts/TTNorms-Bold.woff") format("woff");
+    /* url(/path/to/fonts/examplefont.eot) format("eot") */
+    font-weight: 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "TTNorms ExtraBold";
+    src: url("../fonts/TTNorms-ExtraBold.woff") format("woff");
+    /* url(/path/to/fonts/examplefont.eot) format("eot") */
+    font-weight: 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "TTNorms Medium";
+    src: url("../fonts/TTNorms-Medium.ttf") format("woff");
+    /* url(/path/to/fonts/examplefont.eot) format("eot") */
+    font-weight: 900;
+    font-display: swap;
+}
+
+
+body {
+    position: relative;
+    background: var(--bg-color);
+    background-image: url(../img/pattern.png);
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+    line-height: inherit;
+    font-family: 'TTNorms', sans-serif;
+}
+
+main {
+    width: 65%;
+    margin: auto;
+}
+
+.scr-n {
+    overflow: hidden;
+}
+
+.who-i {
+    display: flex;
+    /*flex-direction: wrap;*/
+    background: var(--card-color);
+    border-radius: 24px;
+    box-shadow: 0 4px 14px 5px rgba(53, 53, 53, 0.25);
+    max-width: 1265px;
+    width: 100%;
+    margin: 5% auto auto;
+    padding: 2rem 6rem;
+}
+
+.avatar-block {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+}
+
+.avatar {
+    margin: auto;
+    transition-duration: .3s;
+}
+
+.name {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 0;
+}
+
+.about-me-block {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto auto;
+    width: auto;
+    max-width: 560px;
+}
+
+.about-me-title {
+    font-family: 'TTNorms Bold', sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    margin-bottom: 0.5%;
+}
+
+.about-me-text {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.links-block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 155px;
+    height: 148px;
+    margin: auto;
+}
+
+.link-card {
+    display: flex;
+    background: linear-gradient(87.37deg, #445E54 0%, #2E6857 100%);
+    border-radius: 16px;
+    min-width: 67px;
+    height: 64px;
+    margin: 5% 3.241% 3.241%;
+    transition-duration: .3s;
+}
+
+.link-card-img {
+    margin: auto;
+    width: 48px;
+    height: 48px;
+}
+
+.link-card:hover,
+.avatar:hover {
+    transform: scale(1.2);
+}
+
+.skills {
+    display: flex;
+    justify-content: space-between;
+    margin: 5% auto auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    max-width: 570px;
+    width: 100%;
+    background: var(--card-color-op);
+    box-shadow: 0 4px 14px 5px rgba(53, 53, 53, 0.25);
+    border-radius: 24px;
+    padding: 1.5rem;
+    background-image: url(../img/edu.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+.skill-card-title {
+    display: flex;
+    justify-content: center;
+    font-family: 'TTNorms Bold', sans-serif;
+    font-size: 32px;
+    line-height: 38px;
+    margin: 1% 0 0;
+}
+
+.skill-card-text {
+    font-size: 18px;
+    max-width: 370px;
+}
+
+.card:nth-child(2) {
+    background-image: url(../img/bub.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+.portfolio-img {
+    display: flex;
+    margin: 10% auto auto;
+}
+
+.portfolio-img-text {
+    display: none;
+    text-align: center;
+    font-size: 36px;
+}
+
+.card-sell-element,
+.card-sell-element-popup {
+    display: flex;
+    flex-direction: column;
+    max-width: 570px;
+    max-height: 560px;
+    background: var(--card-color-op);
+    box-shadow: 0 4px 14px 5px rgba(53, 53, 53, 0.25);
+    border-radius: 24px;
+    padding-bottom: 1.5rem;
+    margin: auto auto 5%;
+}
+
+.sell-title,
+.sell-title-popup {
+    display: flex;
+    margin: 0;
+    width: 100%;
+    min-width: 342px;
+    height: 252px;
+    max-width: 570px;
+    max-height: 252px;
+    border-radius: 24px 24px 0 0;
+    background: linear-gradient(0deg, rgba(26, 26, 26, 0.5), rgba(26, 26, 26, 0.5)), url(../img/bg-card.png);
+}
+
+.sell-title-text {
+    font-family: 'TTNorms Bold', sans-serif;
+    font-size: 40px;
+    line-height: 47px;
+    display: flex;
+    margin: auto;
+}
+
+.sell-info {
+    margin: auto;
+    max-width: 459px;
+    text-align: left;
+    padding: 0 1.5rem;
+}
+
+.sell-info-text {
+    display: flex;
+    margin: 5% auto auto;
+    width: 100%;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 28px;
+}
+
+.info-sell-btb {
+    display: block;
+    margin: 10% auto auto;
+    width: 280px;
+    height: 60px;
+    background: linear-gradient(87.37deg, #445E54 0%, #2E6857 100%);
+    border-radius: 12px;
+    color: var(--white);
+    border: 0;
+    font-size: 24px;
+    line-height: 28px;
+    transition: all .3s;
+}
+
+.info-sell-btb:hover {
+    transform: scale(1.2);
+}
+
+.swiper {
+    margin-top: 3%;
+    margin-bottom: 5%;
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-pagination-bullet {
+    background: var(--swiper-btn-color, #000);
+    width: 14px;
+    height: 14px;
+}
+
+.line {
+    display: flex;
+    margin: auto;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    max-width: 949px;
+    margin: 2.5% auto auto;
+}
+
+.creator {
+    color: var(--bullet-color);
+    font-size: 20px;
+    margin-bottom: .3%;
+    transition: all .3s;
+    line-height: 28px;
+}
+
+.creator a {
+    text-decoration: none;
+    color: var(--bullet-color);
+}
+
+.creator a:hover {
+    color: var(--links-hover-color);
+    text-decoration: underline;
+}
+
+.rights {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.popup {
+    display: flex;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    backdrop-filter: blur(16px);
+    max-height: 100vh;
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .4s, visibility .4s;
+}
+
+.show-popup {
+    visibility: visible;
+    opacity: 1;
+}
+
+.card-sell-element-popup {
+    position: relative;
+    background: var(--card-color);
+    z-index: 1001;
+    width: 100%;
+    max-width: 770px;
+    max-height: 1060px;
+}
+
+.close_popup {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.close-popup:hover {
+    cursor: pointer;
+}
+
+.sell-title-popup {
+    max-width: 770px;
+    min-height: 250px;
+    background: linear-gradient(0deg, rgba(26, 26, 26, 0.5), rgba(26, 26, 26, 0.5)), url(../img/card-bg-popup.png);
+}
+
+.sell-info-popup {
+    max-width: 720px;
+    padding-bottom: 2.5%;
+}
+
+.sell-info-text-popup {
+    text-align: left;
+    width: 100%;
+    max-width: 720px;
+}
+
+.link-card-popup {
+    max-width: 24px;
+    margin: 5% auto auto .5%;
+}
+
+@media screen and (max-width: 1750px) {
+    .about-me-block {
+        margin-left: 5%;
+        margin-right: 3%;
+    }
+
+    .card:nth-child(2) {
+        margin-left: 2.5%;
+    }
+
+    .card-sell-element {
+        margin-top: 5%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    main {
+        width: 95%;
+    }
+
+    .who-i {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .about-me-block {
+        margin: auto auto 2.5%;
+        text-align: center;
+    }
+
+    .card {
+        margin: auto;
+    }
+
+    .card:nth-child(2) {
+        margin: 5% auto auto;
+    }
+
+    .skills {
+        margin-top: 15%;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .line {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .portfolio-img {
+        display: none;
+    }
+
+    .portfolio-img-text {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .sell-info {
+        padding: 1rem;
+    }
+}
